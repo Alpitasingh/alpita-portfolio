@@ -974,16 +974,18 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-/* ───────── FORM SUBMIT ───────── */
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+
+<!-- EMAILJS CDN (ONLY ONCE) -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
+/* ───────── EMAILJS INIT ───────── */
 (function(){
   emailjs.init("_pNX4jIB13Rq90Uq2");
 })();
 
+/* ───────── FORM SUBMIT ───────── */
 function handleSubmit(btn){
   const name = document.querySelector('input[type="text"]').value;
   const email = document.querySelector('input[type="email"]').value;
@@ -1000,7 +1002,6 @@ function handleSubmit(btn){
     btn.textContent = "❌ FAILED";
   });
 }
-</script>
 
 /* ───────── SMOOTH SCROLL OFFSET ───────── */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
