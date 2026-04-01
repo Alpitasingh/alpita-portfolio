@@ -476,6 +476,13 @@ footer span{color:var(--cyan)}
   .container{padding:0 20px}
 }
 </style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("_pNX4jiB13Rq90Uq2");
+})();
+</script>
 </head>
 <body>
 
@@ -793,17 +800,17 @@ footer span{color:var(--cyan)}
       <div class="contact-form reveal reveal-delay-1">
         <div class="form-group">
           <label>Your Name</label>
-          <input type="text" placeholder="Commander...">
+          <input type="text" id="name" placeholder="Commander...">
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="your@mission.com">
+          <input type="email" id="email" placeholder="your@mission.com">
         </div>
         <div class="form-group">
           <label>Message</label>
-          <textarea placeholder="Initiating transmission..."></textarea>
+          <textarea id="message" placeholder="Initiating transmission..."></textarea>
         </div>
-        <button onclick="handleSubmit(this)" class="btn btn-primary" style="width:100%;padding:16px;">Send Message</button>
+        <button onclick="handleSubmit()" class="btn btn-primary" style="width:100%;padding:16px;">Send Message</button>
       </div>
     </div>
   </div>
@@ -973,6 +980,33 @@ window.addEventListener('scroll',()=>{
     p.style.transform = `translateY(${sy*(0.04+i*.01)}px)`;
   });
 });
+
+// 🔥 YAHAN SE ADD KAR
+function handleSubmit(){
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  if(!name || !email || !message){
+    alert("Please fill all fields");
+    return;
+  }
+
+  emailjs.send("service_pxmbrof", "template_chtineu", {
+    from_name: name,
+    from_email: email,
+    message: message
+  })
+  .then(function(response) {
+    alert("✅ Message Sent Successfully!");
+  }, function(error) {
+    alert("❌ Failed: " + JSON.stringify(error));
+  });
+
+}
+// 🔥 YAHAN TAK ADD KAR
+
 </script>
 </body>
 </html>
