@@ -583,7 +583,39 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact" class="relative isolate overflow-hidden py-28 md:py-40 border-t border-hair min-h-[680px] md:min-h-[820px]">
+<section id="contact" class="relative isolate overflow-hidden py-24 md:py-32 border-t border-hair">
+
+  <!-- Abstract wave background -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-70" viewBox="0 0 1400 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#7C5CFF"/>
+        <stop offset="50%" stop-color="#4FD1FF"/>
+        <stop offset="100%" stop-color="#7C5CFF"/>
+      </linearGradient>
+      <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4FD1FF" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#4FD1FF" stop-opacity=".7"/>
+        <stop offset="100%" stop-color="#7C5CFF" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <g stroke="url(#waveGrad2)" fill="none" stroke-width="1">
+      <path d="M0,420 C150,380 250,340 350,400 C450,460 500,520 600,480 C700,440 780,340 900,380 C1020,420 1100,540 1250,480 C1330,450 1380,430 1400,420" opacity=".9"/>
+      <path d="M0,440 C150,400 250,360 350,420 C450,480 500,540 600,500 C700,460 780,360 900,400 C1020,440 1100,560 1250,500 C1330,470 1380,450 1400,440" opacity=".8"/>
+      <path d="M0,460 C150,420 250,380 350,440 C450,500 500,560 600,520 C700,480 780,380 900,420 C1020,460 1100,580 1250,520 C1330,490 1380,470 1400,460" opacity=".7"/>
+      <path d="M0,480 C150,440 250,400 350,460 C450,520 500,580 600,540 C700,500 780,400 900,440 C1020,480 1100,600 1250,540 C1330,510 1380,490 1400,480" opacity=".6"/>
+      <path d="M0,500 C150,460 250,420 350,480 C450,540 500,600 600,560 C700,520 780,420 900,460 C1020,500 1100,620 1250,560 C1330,530 1380,510 1400,500" opacity=".5"/>
+      <path d="M0,520 C150,480 250,440 350,500 C450,560 500,620 600,580 C700,540 780,440 900,480 C1020,520 1100,640 1250,580 C1330,550 1380,530 1400,520" opacity=".4"/>
+      <path d="M0,540 C150,500 250,460 350,520 C450,580 500,640 600,600 C700,560 780,460 900,500 C1020,540 1100,660 1250,600 C1330,570 1380,550 1400,540" opacity=".3"/>
+    </g>
+    <g stroke="url(#waveGrad1)" fill="none" stroke-width="1.4">
+      <path d="M900,600 C960,540 1000,460 1080,420 C1160,380 1220,300 1300,340 C1350,365 1380,390 1400,410" opacity=".9"/>
+      <path d="M880,620 C940,560 980,480 1060,440 C1140,400 1200,320 1280,360 C1330,385 1360,410 1380,430" opacity=".75"/>
+      <path d="M860,640 C920,580 960,500 1040,460 C1120,420 1180,340 1260,380 C1310,405 1340,430 1360,450" opacity=".6"/>
+      <path d="M840,660 C900,600 940,520 1020,480 C1100,440 1160,360 1240,400 C1290,425 1320,450 1340,470" opacity=".45"/>
+    </g>
+  </svg>
+  <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent"></div>
 
   <div class="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12">
